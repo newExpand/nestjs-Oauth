@@ -33,7 +33,7 @@ export class UserService {
     this.userRepository.save(user);
   }
 
-  deleteUser(email) {
+  deleteUser(email: string) {
     return this.userRepository.delete({ email });
   }
 }
