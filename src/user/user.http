@@ -25,3 +25,13 @@ content-type: application/json
 
 ### 유저 삭제
 DELETE {{server}}/user/delete/lee@gmail.com
+
+### 잘못된 이메일을 입력한 경우
+POST {{server}}/user/create
+Content-Type: application/json
+
+{
+    "username": "Seung",
+    "password": "test1234",
+    "email": "lee-google"
+}
