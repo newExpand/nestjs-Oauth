@@ -17,7 +17,7 @@ export class User {
   username: string;
 
   // 생성일 default: true로 기본값 설정
-  @Column({ type: 'datetime', default: 'CURRENT_TIMESTAMP' })
+  @Column({ type: 'datetime', default: () => 'CURRENT_TIMESTAMP' })
   createdDt: Date = new Date();
 
   @Column({ nullable: true })
